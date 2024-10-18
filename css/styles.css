@@ -4,31 +4,41 @@
     padding: 0;
 }
 
+main{
+    background-color: black;
+}
+
 button{
     background-color: transparent;
     border: none;
     width: 40px;
+    color: white;
 }
 
-svg {
-    margin: 0 auto;
-    transform: scale(.5);
-} 
-
-a{
+.boton{
+    text-align: center;
     text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
+
+/*HEADER*/
 /*Menu*/
+/*Logo y menu lateral*/
 .menu{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
-}
-
-.menu div:first-child{
-    display: flex;
+    margin-top: 18px;
+    width: 100%;
+    padding: 0 60px;
 }
 
 .menu div:first-child{
@@ -36,6 +46,53 @@ a{
     align-items: center;
 }
 
+.menu button{
+    font-size: 3rem;
+}
+
 .menu svg{
-    width: fit-content;
+    fill: white;
+    width: 100%;
+}
+
+.logo a{
+    width: 13%;
+    margin-right: 20px;
+}
+
+/*Enlaces*/
+.menu .boton{
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+/*MAIN*/
+/*banner*/
+#banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#banner video{
+    width: 50%;
+}
+
+#banner div{
+    width: 100%;
+}
+
+.izq-der{
+    animation: mover-izq-der 20s infinite;
+    color: white;
+}
+
+
+@keyframes mover-izq-der {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
 }
