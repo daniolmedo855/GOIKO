@@ -4,6 +4,17 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Knockout';
+    src: url('../fonts/knockout/Knockout-Bold.otf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+  }
+
+body{
+    font-family: 'Knockout';
+}
+
 main{
     background-color: black;
 }
@@ -11,8 +22,11 @@ main{
 button{
     background-color: transparent;
     border: none;
-    width: 40px;
     color: white;
+}
+
+button.menuLateral {
+    width: 40px;
 }
 
 .boton{
@@ -22,10 +36,9 @@ button{
     border: 2px solid white;
     background-color: transparent;
     padding: 10px 25px;
-    border-radius: 30px;
+    border-radius: 20px;
     font-weight: bold;
 }
-
 
 /*HEADER*/
 /*Menu*/
@@ -39,6 +52,7 @@ button{
     margin-top: 18px;
     width: 100%;
     padding: 0 60px;
+    z-index: 100;
 }
 
 .menu div:first-child{
@@ -68,31 +82,73 @@ button{
 
 /*MAIN*/
 /*banner*/
+
 #banner{
     width: 100%;
+}
+
+#banner>div:first-child{
     display: flex;
     justify-content: center;
 }
 
+/*video*/
 #banner video{
     width: 50%;
+    z-index: 99;
 }
 
 #banner div{
     width: 100%;
+    
 }
 
-.izq-der{
-    animation: mover-izq-der 20s infinite;
+/*animaciones*/
+.mover{
     color: white;
+    width: 100%;
+    overflow-x: hidden;
 }
 
+.mover div{
+    display: flex;
+}
+
+.mover p{
+    font-size: 112px;
+}
 
 @keyframes mover-izq-der {
     from{
         transform: translateX(-100%);
     }
     to{
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
+}
+
+@keyframes mover-der-izq{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.mover div p{
+    animation: mover-izq-der 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mover div:nth-child(2n+1) p{
+    animation: mover-der-izq 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mover span{
+    color: transparent;
+    -webkit-text-stroke: solid 2px white;
 }
