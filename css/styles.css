@@ -15,7 +15,7 @@ body{
     font-family: 'Knockout';
 }
 
-main{
+main, header{
     background-color: black;
 }
 
@@ -40,18 +40,76 @@ button.menuLateral {
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+svg{
+    fill:white;
+}
+
+/*ANIMACIONES*/
+.mover{
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.mover div{
+    display: flex;
+    overflow: hidden;
+}
+
+.mover p{
+    font-size: 144px;
+    line-height: 0.8;
+}
+
+@keyframes mover-izq-der {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mover-der-izq{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.mover div p{
+    animation: mover-izq-der 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mover div:nth-child(2n+1) p{ 
+    animation: mover-der-izq 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mover span{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
 /*HEADER*/
 /*Menu*/
 /*Logo y menu lateral*/
 .menu{
-    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
-    margin-top: 18px;
     width: 100%;
-    padding: 0 60px;
+    padding: 20px 60px 0px 60px;
     z-index: 100;
 }
 
@@ -80,6 +138,11 @@ button.menuLateral {
     margin: 0 10px;
 }
 
+.menu a.boton+a.boton{
+    background-color: #ee2737;
+    border: 2px solid #ee2737;
+}
+
 /*MAIN*/
 /*banner*/
 
@@ -94,6 +157,8 @@ button.menuLateral {
 
 /*video*/
 #banner video{
+    position: relative;
+    bottom: 110px;
     width: 50%;
     z-index: 99;
 }
@@ -103,52 +168,84 @@ button.menuLateral {
     
 }
 
-/*animaciones*/
-.mover{
-    color: white;
+/*letras*/
+#banner .mover{
+    position: absolute;
+    top: 300px;
+}
+
+
+
+/*NOVEDADES*/
+/*IMAGEN DE FONDO*/
+#novedades > div:last-child>img{
     width: 100%;
-    overflow-x: hidden;
+    border-top: solid 2px white;
 }
 
-.mover div{
+/*BOTONES Y NUMERO*/
+#novedades{
+    position: relative;
+}
+#novedades > div:first-child{
+    position: absolute;
     display: flex;
+    right: 100px;
+    align-items: center;
+    top: 60px;
 }
 
-.mover p{
-    font-size: 112px;
+#novedades > div:first-child button{
+    margin: 0 5px;
 }
 
-@keyframes mover-izq-der {
-    from{
-        transform: translateX(-100%);
-    }
-    to{
-        transform: translateX(0%);
-    }
+#novedades > div:first-child p{
+    color: white;
+    font-size: 40px;
 }
 
-@keyframes mover-der-izq{
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
+#novedades > div:first-child >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px white;
+    margin-left: 20px;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px
 }
 
-.mover div p{
-    animation: mover-izq-der 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+/*LETRAS*/
+#novedades >div:last-child>div{
+    position: absolute;
+    top: 60%;
+    left: 3%; 
+    color: white;
 }
 
-.mover div:nth-child(2n+1) p{
-    animation: mover-der-izq 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+
+#novedades >div:last-child>div>p{
+    font-size: 12px;
 }
 
-.mover span{
-    color: transparent;
-    -webkit-text-stroke: solid 2px white;
+#novedades >div:last-child>div>h2{
+    font-size: 100px;
+    line-height: 1;
+}
+
+
+#novedades >div:last-child>div>a{
+    font-size: 30px;
+}
+
+/*CARTA*/
+/*TITULO*/
+#carta>div:first-child{
+    padding-top: 5px;
+    margin: 10px 0;
+    border: solid 2px white;
+}
+
+#carta>div:first-child>div{
+   
 }
