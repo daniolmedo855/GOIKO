@@ -13,6 +13,7 @@
 
 body{
     font-family: 'Knockout';
+    color: white;
 }
 
 main, header{
@@ -22,7 +23,7 @@ main, header{
 button{
     background-color: transparent;
     border: none;
-    color: white;
+    color:white;
 }
 
 button.menuLateral {
@@ -32,7 +33,6 @@ button.menuLateral {
 .boton{
     text-align: center;
     text-decoration: none;
-    color: white;
     border: 2px solid white;
     background-color: transparent;
     padding: 10px 25px;
@@ -51,7 +51,6 @@ svg{
 
 /*ANIMACIONES*/
 .mover{
-    color: white;
     width: 100%;
     overflow-x: hidden;
 }
@@ -63,7 +62,6 @@ svg{
 
 .mover p{
     font-size: 144px;
-    line-height: 0.8;
 }
 
 @keyframes mover-izq-der {
@@ -172,15 +170,19 @@ svg{
 #banner .mover{
     position: absolute;
     top: 300px;
+    line-height: 0.8;
 }
 
 
 
 /*NOVEDADES*/
 /*IMAGEN DE FONDO*/
+
 #novedades > div:last-child>img{
     width: 100%;
     border-top: solid 2px white;
+    
+    
 }
 
 /*BOTONES Y NUMERO*/
@@ -200,7 +202,6 @@ svg{
 }
 
 #novedades > div:first-child p{
-    color: white;
     font-size: 40px;
 }
 
@@ -220,7 +221,6 @@ svg{
     position: absolute;
     top: 60%;
     left: 3%; 
-    color: white;
 }
 
 
@@ -243,9 +243,129 @@ svg{
 #carta>div:first-child{
     padding-top: 5px;
     margin: 10px 0;
-    border: solid 2px white;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    line-height: 1;
 }
 
-#carta>div:first-child>div{
-   
+/*imagenes*/
+
+#carta{
+    overflow-x: hidden;
+}
+
+#carta>div:last-child{
+    position: relative;
+    left: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#carta>div:last-child>div{
+    margin: 10px;
+    margin-top: 60px;
+}
+
+#carta>div:last-child>div>img{
+    width: 580px;
+    height: 580px;
+    border: solid 2px white;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#carta>div:last-child h4{
+    font-size: 26px;
+}
+
+#carta>div:last-child p{
+    color: grey;
+    font-size: 18px;
+}
+
+/*club*/
+#club{
+    margin-top: 100px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,28,38,1) 100%);
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+}
+
+#club > div:first-child >h2{
+   text-align: center;
+   font-size: 40px;
+    
+} 
+
+#club > div:first-child >div{ 
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    
+}   
+
+#club > div:first-child >div img{
+    width: 100px;
+    margin: 0 10px;
+}   
+
+#club > div:first-child >div>div:first-child{
+    margin-right: 30px;
+}   
+
+#club > div:first-child >div>div:nth-child(4){
+    margin-right: 30px;
+} 
+
+#club > div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 260px;
+    padding-bottom: 180px
+}
+
+
+#club > div:last-child>div{
+    margin-left: 80px;
+}
+
+#club > div:last-child h3{
+    font-size: 60px;
+    line-height: 1;
+}
+
+#club > div:last-child p{
+   margin: 20px 0;
+}
+
+/*camion*/
+#camion{
+    position: relative;
+    margin-top: 10px;
+    
+} 
+
+#camion >div{
+    width: 50%;
+    position: absolute;
+    bottom: 28%;
+    left: 4%;
+}
+
+#camion>div>h3{
+    font-size: 80px;
+    line-height: 1;
+}
+
+#camion>div>a{
+    font-size: 30px;
+}
+
+#camion>div>p{
+    font-size: 15px;
+    margin-bottom: 10px;
 }
