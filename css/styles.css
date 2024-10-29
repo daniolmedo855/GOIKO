@@ -467,6 +467,79 @@ svg{
 /*FOOTER*/
 footer{
     color: black;
+    margin-top: 120px;
+    padding-bottom: 120px;
+
+}
+
+footer>div{
+    margin: 0 60px;
+}
+
+/*LOGO Y ENLACES*/
+footer > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+footer>div:first-child>a{
+    width: 7%;
+    margin-right: 600px;
+}
+
+footer >div:first-child>a>svg{
+    fill: black;
+    width: 100%;
+}
+
+footer a{
+    color: black;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer >div:first-child> ul>li>a{
+    font-size: 40px;
+}
+
+footer >div:first-child> ul:last-child>li{
+    margin-bottom: 5px;
+}
+
+footer >div:first-child> ul:last-child>li>a{
+    font-size: 15px;
+}
+
+
+/*ICONOS RRSS*/
+footer>div:nth-child(2){
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer>div:nth-child(2)>a{
+    display: flex; 
+    margin: 0 10px;
+    width: 2%;
+    border: solid 8px black;
+    border-radius: 100%;
+    background-color: black;
+}
+
+footer>div:nth-child(2)>a>svg{
+    width: 100%;
+    margin: 0 auto;
+    fill: white;
+    
+}
+
+/*TITULO*/
+footer .mover{
+    margin: 0;
 }
 
 footer .titulo{
@@ -479,29 +552,30 @@ footer .titulo span{
     -webkit-text-stroke: 2px black;
 }
 
-
-
-/*LOGO Y ENLACES*/
-footer svg{
+/*Letras final*/
+footer>div:nth-child(2)>a>svg:nth-child(3){
     fill: black;
-    width: 40%;
+    width: 100%;
 }
 
-footer a{
-    color: black;
-}
-
-footer > div:first-child{
+footer>div:last-child{
+    font-size: 10px;
+    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    padding: 20px 60px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer ul{
-    list-style: none;
+footer>div:last-child >div{
+    display: flex;
+    align-items: center;
 }
 
-
-footer >div:first-child> ul:first-child>li>a{
-    font-size: 20px;
+footer>div:last-child >div>div{
+    width: 10px;
+    height: 10px;
+    border-radius: solid 1px black;
+    background-color: black;
+    border-radius: 100%;
 }
+
