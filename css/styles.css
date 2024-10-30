@@ -40,6 +40,26 @@ button.menuLateral {
     font-weight: bold;
 }
 
+.boton:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.boton span:hover{
+    animation: voltereta 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes voltereta {
+    from{
+        transform: translateY(-100%);
+    } 
+    to{
+        transform: translateY(0%);
+    }
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -140,10 +160,7 @@ svg{
     margin: 0 10px;
 }
 
-.menu .boton:first-child:hover{
-    background-color: white;
-    color: black;
-}
+
 
 .menu a.boton+a.boton{
     background-color: #ee2737;
@@ -155,11 +172,6 @@ svg{
     color: black;
     border: 2px solid #ffb600;
 }
-
-.menu a.boton+a.boton>p:hover{
-    
-}
-
 
 /*MAIN*/
 /*banner*/
@@ -292,6 +304,11 @@ svg{
     border: solid 2px white;
     border-radius: 10px;
     object-fit: cover;
+}
+
+#carta>div:last-child>div>img:hover{
+    filter: Hue-rotate(300deg) grayscale(60%);
+
 }
 
 #carta>div:last-child h4{
