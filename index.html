@@ -19,7 +19,7 @@
                         <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"></path>
                         </svg>
                     </button>
-                    <div class="menuLateral" style="display: none">
+                    <div class="hamburguesa">
                         <div>
                             <button>&#10005;</button>
                             <h3>GOIKO</h3>
@@ -368,5 +368,16 @@
             
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menu = document.querySelector(".menuLateral");
+            const navbar = document.querySelector(".hamburguesa");
+            console.log(menu);
+            console.log(navbar);
+            menu.addEventListener("click", () => {
+                navbar.style.display = "block";
+            });
+        });
+    </script>
 </body>
 </html>
