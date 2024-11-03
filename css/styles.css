@@ -248,10 +248,10 @@ svg{
 }
 
 .hamburguesa > div:last-child > div:first-child{
-    font-size: 120px;
+    font-size: 7.5rem;
     line-height: 0.9;
     flex-direction: column;
-    padding-left: 10px;
+    margin-left: 2.8%;
 }
 
 .hamburguesa > div:last-child > div:first-child>a{
@@ -265,10 +265,28 @@ svg{
 
 /*tabla*/
 .hamburguesa > div:last-child >div:nth-child(2){
-    font-size: 25px;
-    display: flex;
-    width: 36%;
+    font-size: 20px;
+    width: 80%;
     margin-top: 10px;
+}
+
+.hamburguesa > div:last-child >div:nth-child(2)>div{
+    display: flex;
+    align-items: start;
+}
+
+.hamburguesa > div:last-child >div:nth-child(2)>div>a{
+    width: 60%;
+}
+
+@media screen and (max-width: 1400px) {
+    .hamburguesa > div:last-child >div:nth-child(2)>div{
+        display: flex;
+        flex-direction: column;
+    }
+    .hamburguesa > div:last-child >div:nth-child(2)>div>a{
+        width: 100%;
+    }
 }
 
 /*RRSS*/
@@ -279,13 +297,12 @@ svg{
 
 .hamburguesa> div:last-child >div:nth-child(3)>a{
     display: flex; 
-    margin: 0 10px;
+    margin-right: 20px;
     width: 30px;
     padding: 6px;
     border-radius: 100%;
     background-color: white;
 }
-
 .hamburguesa> div:last-child >div:nth-child(3)>a>svg{
     width: 90%;
     margin: 0 auto;
@@ -299,6 +316,92 @@ svg{
 
 .hamburguesa> div:last-child >div:nth-child(3)>a:hover>svg{
     fill: white;
+}
+
+@media screen and (max-width: 1400px) {
+    /*Letras*/
+    .hamburguesa > div:last-child {
+        margin-left: 10%;
+
+    }
+
+    .hamburguesa > div:last-child > div:first-child{
+        font-size: 6rem;
+        margin-bottom: 20%;
+    }
+
+    /*tabla*/
+    .hamburguesa > div:last-child >div:nth-child(2){
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /*Letras*/
+    .hamburguesa > div:last-child {
+        margin-left: 15%;
+
+    }
+
+    .hamburguesa > div:last-child > div:first-child{
+        font-size: 6rem;
+        margin-bottom: 20%;
+    }
+
+    /*tabla*/
+    .hamburguesa > div:last-child >div:nth-child(2){
+        font-size: 25px;
+    }
+
+    .hamburguesa> div > svg{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /*Letras*/
+    .hamburguesa > div:last-child {
+        margin-left: 20%;
+
+    }
+
+    .hamburguesa > div:last-child > div:first-child{
+        font-size: 4rem;
+    }
+
+    /*tabla*/
+    .hamburguesa > div:last-child >div:nth-child(2){
+        font-size: 15px;
+    }
+
+    /*RRSS*/
+    .hamburguesa > div:last-child >div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-right: 10px;
+        bottom: 0;
+        left: 0;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        /*Letras*/
+        .hamburguesa > div:last-child {
+            margin-left: 20%;
+    
+        }
+    
+        .hamburguesa > div:last-child > div:first-child{
+            font-size: 2rem;
+        }
+    
+        /*tabla*/
+        .hamburguesa > div:last-child >div:nth-child(2){
+            font-size: 10px;
+        }
+    
+    }
 }
 
 /*RUEDA*/
