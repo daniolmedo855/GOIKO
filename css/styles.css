@@ -9,15 +9,30 @@
     src: url('../fonts/knockout/Knockout-Bold.otf') format('truetype');
     font-style: normal;
     font-weight: bold;
-  }
+}
 
-body{
-    font-family: 'Knockout';
-    color: white;
+.nunito-sans-parrafos{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
 }
 
 main, header{
     background-color: black;
+}
+
+h1, h2, h3, h4, a{
+    font-family: 'Knockout';
+    color: white;
+}
+
+p{
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
 }
 
 button{
@@ -72,6 +87,7 @@ svg{
 
 .mover p{
     font-size: 144px;
+    font-family: 'Knockout';
 }
 
 @keyframes mover-izq-der {
@@ -158,6 +174,7 @@ svg{
     transition: height 1s;
 }
 
+/*Cerrar*/
 .hamburguesa >div>button{
     background-color: black;
     padding: 20px 40px;
@@ -172,34 +189,93 @@ svg{
     left: -6px;
 }
 
-.hamburguesa > div:nth-child(2){
-    position: relative;
-    top: 6%;
-    left: 8% ;
+/*Contenido*/
+.hamburguesa > div:last-child{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.hamburguesa > div:last-child > div:first-child{
     font-size: 120px;
     line-height: 0.9;
+    flex-direction: column;
+    padding-left: 10px;
 }
 
-.hamburguesa > div:nth-child(2)>a{
+.hamburguesa > div:last-child > div:first-child>a{
     width: 100%;
-    display: block;
 }
 
-.hamburguesa > div:nth-child(2)>a:hover{
+.hamburguesa  > div:last-child > div:first-child>a:hover{
     color: transparent;
     -webkit-text-stroke: 1px white;
-    
 }
 
-
-.hamburguesa > div:nth-child(3){
-    position: relative;
-    top: 10%;
-    left: 8% ;
+/*tabla*/
+.hamburguesa > div:last-child >div:nth-child(2){
     font-size: 25px;
     display: flex;
     width: 36%;
-    vertical-align: top;
+    margin-top: 10px;
+}
+
+/*RRSS*/
+.hamburguesa > div:last-child >div:nth-child(3){
+    display: flex;
+    margin-top: 50px;
+}
+
+.hamburguesa> div:last-child >div:nth-child(3)>a{
+    display: flex; 
+    margin: 0 10px;
+    width: 2%;
+    padding: 6px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.hamburguesa> div:last-child >div:nth-child(3)>a>svg{
+    width: 90%;
+    margin: 0 auto;
+    fill: #ee2737;
+}
+
+.hamburguesa> div:last-child >div:nth-child(3)>a:hover{
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.hamburguesa> div:last-child >div:nth-child(3)>a:hover>svg{
+    fill: white;
+}
+
+/*RUEDA*/
+.hamburguesa > div:last-child > div:last-child{
+   width: 15%;
+   position: absolute;
+   right: 3%;
+   bottom: 5%;
+   background-color: black;
+   padding: 20px;
+   border-radius: 100%;
+}
+
+.hamburguesa > div:last-child > div:last-child > a{
+    margin: 0 auto;
+}
+
+.hamburguesa > div:last-child > div:last-child > a > div > img{
+    position: absolute;
+    right: 40%;
+    width: 20%;
+}
+
+.hamburguesa > div:last-child > div:last-child:hover{
+    background-color: white;
+}
+
+.hamburguesa > div:last-child > div:last-child:hover > a > div >svg{
+    fill: #ee2737;
 }
 
 /*Enlaces*/
@@ -207,7 +283,6 @@ svg{
     font-size: 1rem;
     margin: 0 10px;
 }
-
 
 .menu a.boton+a.boton{
     background-color: #ee2737;
@@ -222,7 +297,6 @@ svg{
 
 /*MAIN*/
 /*banner*/
-
 #banner{
     width: 100%;
 }
@@ -603,15 +677,6 @@ footer >div:first-child> ul:last-child>li>a{
     font-size: 15px;
 }
 
-@keyframes barra {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 100%;
-    }
-}
-
 /*ICONOS RRSS*/
 footer>div:nth-child(2){
     display: flex;
@@ -648,6 +713,10 @@ footer .titulo{
     border-bottom: solid 2px black
 }
 
+footer .titulo>p{
+    color: black;
+}
+
 footer .titulo span{
     color: transparent;
     -webkit-text-stroke: 2px black;
@@ -667,6 +736,11 @@ footer>div:last-child{
     align-items: center;
 }
 
+footer>div:last-child>p{
+    font-size: 18px;
+    color: black;
+}
+
 footer>div:last-child >div{
     display: flex;
     align-items: center;
@@ -678,6 +752,12 @@ footer>div:last-child >div>div{
     border-radius: solid 1px black;
     background-color: black;
     border-radius: 100%;
+}
+
+footer>div:last-child >div>p{
+    color: black;
+    font-size: 14px;
+    margin-right: 5px;
 }
 
 
