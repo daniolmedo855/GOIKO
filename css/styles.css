@@ -141,6 +141,14 @@ svg{
     
 }
 
+@media screen and (max-width: 500px) {
+    .mover p{
+        font-size: 2rem;
+        
+    }
+    
+}
+
 /*HEADER*/
 /*Menu*/
 /*Logo y menu lateral*/
@@ -177,7 +185,7 @@ svg{
     z-index: 9999;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1100px) {
     .boton{
         border: 2px solid white;
         padding: 5px 15px;
@@ -200,15 +208,32 @@ svg{
         display: none;
     }
 
+    .logo >div>button{
+        margin-left: 60%;
+    }
+
 }
 
 @media screen and (max-width: 660px) {
+    .boton{
+        border: 2px solid white;
+        padding: 2px 8px;
+        border-radius: 50px;
+        font-size: 6px;
+    }
+
     .menu {
         justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .menu > div:first-child{
-        width: 10%;
+        width: 20%;
+    }
+
+    .menu > div:last-child > a{
+        margin: 0;
     }
 
 }
@@ -735,6 +760,21 @@ svg{
     
 }
 
+@media screen and (max-width: 600px) {
+    #club > div:last-child{
+        display: block;
+    }
+
+    #club > div:last-child>img{
+        width: 40%;
+    }
+
+    #club > div:last-child>div>h3{
+        font-size: 2rem;
+    }
+    
+}
+
 #club > div:last-child p{
    margin: 20px 0;
 }
@@ -939,28 +979,28 @@ svg{
 
 @media screen and (max-width: 1600px) {
 
-    #news>div>div>article{
+    #news>div>div>article img{
         scale: 0.8;
     }
 }
 
 @media screen and (max-width: 1400px) {
 
-    #news>div>div>article{
+    #news>div>div>article img{
         scale: 0.7;
     }
 }
 
 @media screen and (max-width: 1300px) {
 
-    #news>div>div>article{
+    #news>div>div>article img{
         scale: 0.6;
     }
 }
 
 @media screen and (max-width: 1150px) {
 
-    #news>div>div>article{
+    #news>div>div>article img{
         scale: 0.55;
     }
 }
@@ -986,6 +1026,25 @@ svg{
 
     #news article h3{
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #news>div>div>article img{
+        scale: 0.6;
+    }
+
+    #news article h3{
+        width: 70%;
+        font-size: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #news>div>div>article img{
+        scale: 0.6;
     }
 }
 
